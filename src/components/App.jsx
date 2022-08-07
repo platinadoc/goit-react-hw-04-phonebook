@@ -23,7 +23,6 @@ export class App extends Component {
 
   handleChangeInput = e => {
     const input = e.target;
-
     this.setState({ [input.name]: input.value });
   };
 
@@ -38,7 +37,7 @@ export class App extends Component {
         <div className={s.phonebook}>
           <h1 className={s.title}>Phonebook</h1>
           <ContactForm contacts={contacts} handleSubmitForm={this.handleSubmitForm} />
-          <Filter title="Find contacts by name" handleChangeInput={this.handleChangeInput} />
+          <Filter title="Find contacts by name" filter={this.state.filter} handleChangeInput={this.handleChangeInput}/>
         </div>
 
         <div className={s.contacts}>

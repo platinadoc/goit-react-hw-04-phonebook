@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import s from './Filter.module.css';
 
-const Filter = ({ title, handleChangeInput }) => {
+const Filter = ({ title, filter, handleChangeInput }) => {
   return (
     <>
       <p className={s.title}>{title}</p>
@@ -10,6 +10,7 @@ const Filter = ({ title, handleChangeInput }) => {
         placeholder="Enter name"
         className={s.input}
         name="filter"
+        value={filter}
         onChange={handleChangeInput}
       />
     </>
